@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <!-- Chargement du fichier properties contenant
+        la configuration de la datasource vers DB_TICKET  -->
+    <bean id="dataSourceTicketConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="file:${application.home}/conf/db-ticket.properties"/>
+    </bean>
+    <!-- Création de la datasource "dataSourceTicket" -->
+    <bean id="dataSourceTicket"
+          class="org.apache.commons.dbcp2.BasicDataSourceFactory"
+          factory-method="createDataSource"
+          destroy-method="close">
+        <constructor-arg ref="dataSourceTicketConfiguration"/>
+    </bean>
+</beans>
