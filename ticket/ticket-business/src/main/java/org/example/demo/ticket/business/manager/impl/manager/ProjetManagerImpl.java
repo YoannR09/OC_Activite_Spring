@@ -5,7 +5,6 @@ import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
 import javax.inject.Named;
-import java.util.ArrayList;
 import java.util.List;
 
 @Named

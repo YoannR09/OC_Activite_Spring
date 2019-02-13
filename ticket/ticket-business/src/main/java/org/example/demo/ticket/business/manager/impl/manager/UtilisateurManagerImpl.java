@@ -4,8 +4,7 @@ import org.example.demo.ticket.business.manager.contract.manager.UtilisateurMana
 import org.example.demo.ticket.consumer.impl.dao.AbstractDaoImpl;
 import org.example.demo.ticket.model.bean.utilisateur.Utilisateur;
 import org.example.demo.ticket.model.exception.NotFoundException;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+
 
 import javax.inject.Named;
 import java.util.List;

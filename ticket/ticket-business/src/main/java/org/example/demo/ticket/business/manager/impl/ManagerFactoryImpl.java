@@ -10,6 +10,23 @@ import javax.inject.Named;
 public class ManagerFactoryImpl implements ManagerFactory {
 
     @Inject
+    public  ManagerFactoryImpl(ProjetManager pProjetManager,
+                               TicketManager pTicketManager,BugManager pBugManager,
+                               CommentaireManager pCommentaireManager,EvolutionManager pEvolutionManager,
+                               NiveauBugManager pNiveauBugManager,StatutManager pStatutManager,
+                               UtilisateurManager pUilisateurManager,VersionManager pVersionManager) {
+        this.projetManager = pProjetManager;
+        this.ticketManager = pTicketManager;
+        this.bugManager = pBugManager;
+        this.commentaireManager = pCommentaireManager;
+        this.evolutionManager = pEvolutionManager;
+        this.niveauBugManager = pNiveauBugManager;
+        this.statutManager = pStatutManager;
+        this.utilisateurManager = pUilisateurManager;
+        this.versionManager = pVersionManager;
+    }
+
+    @Inject
     private BugManager bugManager;
     @Override
     public BugManager getBugManager() {

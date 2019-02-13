@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.sql.DataSource;
 
+
 public abstract class AbstractDaoImpl {
 
     @Inject
@@ -12,5 +13,9 @@ public abstract class AbstractDaoImpl {
 
     protected DataSource getDataSource(){
         return dataSource;
+    }
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 }

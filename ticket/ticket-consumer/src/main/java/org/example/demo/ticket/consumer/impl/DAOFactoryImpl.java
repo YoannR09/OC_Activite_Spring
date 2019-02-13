@@ -6,7 +6,7 @@ import org.example.demo.ticket.consumer.contract.dao.*;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named
+@Named("daoFactoryImpl")
 public class DAOFactoryImpl implements DAOFactory {
 
     @Inject

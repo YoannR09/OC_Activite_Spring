@@ -4,6 +4,8 @@ package org.example.demo.ticket.batch;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 /**
@@ -24,6 +26,9 @@ public class Main {
      * @throws TechnicalException sur erreur technique
      */
     public static void main(String[] pArgs) throws TechnicalException {
+
+        ApplicationContext vApplicationContext
+                = new AnnotationConfigApplicationContext("classpath:/bootstrapContext.xml");
         try {
             if (pArgs.length < 1) {
                 throw new TechnicalException("Veuillez préciser le traitement à effectuer !");

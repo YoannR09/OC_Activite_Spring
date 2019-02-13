@@ -10,11 +10,14 @@ import javax.inject.Named;
 public abstract class AbstractManagerImpl implements AbstractResource {
 
     @Inject
-    private DAOFactory daoFactory;
+    private static DAOFactory daoFactory;
 
     @Override
     public DAOFactory getDaoFactory() {
-
         return daoFactory;
+    }
+
+    public static void setDaoFactory(DAOFactory pDAOFactory) {
+        daoFactory = pDAOFactory;
     }
 }

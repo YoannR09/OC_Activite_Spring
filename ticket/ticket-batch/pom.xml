@@ -39,19 +39,6 @@
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.postresql</groupId>
-            <artifactId>postresql</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
