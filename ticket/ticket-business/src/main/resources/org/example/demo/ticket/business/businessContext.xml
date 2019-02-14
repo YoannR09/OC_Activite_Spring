@@ -20,5 +20,4 @@ http://www.springframework.org/schema/p ">
         <property name="arguments" ref="daoFactoryImpl"/>
     </bean>
 
-
 </beans>
