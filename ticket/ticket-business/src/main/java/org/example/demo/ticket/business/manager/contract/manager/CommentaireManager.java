@@ -9,4 +9,5 @@ public interface CommentaireManager {
 
     Commentaire getCommentaire(Integer pId) throws NotFoundException;
     List<Commentaire> getListCommentaire();
+    int getCountCommentaire();
 }

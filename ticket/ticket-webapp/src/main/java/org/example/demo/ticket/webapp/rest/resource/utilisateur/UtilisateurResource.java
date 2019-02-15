@@ -46,7 +46,7 @@ public class UtilisateurResource  extends AbstractResource {
     @Path("search")
     public List<Utilisateur> search(@QueryParam("projetId") Integer pProjetId) {
         UtilisateurManager vUtilisateurManager = getManagerFactory().getUtilisateurManager();
-        List<Utilisateur> vList = getManagerFactory().getUtilisateurManager().getListUtilisateur();
+        List<Utilisateur> vList = vUtilisateurManager.getListUtilisateur();
         return vList;
     }
 

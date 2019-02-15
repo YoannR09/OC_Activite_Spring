@@ -11,11 +11,16 @@ import java.util.List;
 public class EvolutionManagerImpl extends AbstractManagerImpl implements EvolutionManager {
     @Override
     public Evolution getEvolution(Integer pId) throws NotFoundException {
-        return null;
+        return getDaoFactory().getEvolutionDao().getEvolution(pId);
     }
 
     @Override
     public List<Evolution> getListEvolution() {
-        return null;
+        return getDaoFactory().getEvolutionDao().getListEvolution();
+    }
+
+    @Override
+    public int getCountEvolution() {
+        return getDaoFactory().getEvolutionDao().getCountEvolution();
     }
 }

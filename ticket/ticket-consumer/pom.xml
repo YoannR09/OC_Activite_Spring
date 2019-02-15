@@ -36,24 +36,6 @@
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.danielw</groupId>
-            <artifactId>spring-jdbc-template</artifactId>
-            <version>0.2.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
-
-
-        <!-- ===== Bibliothèques tierces ===== -->
-
 
         <!-- ===== Tests ===== -->
         <dependency>
@@ -63,12 +45,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>4.3.6.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>4.3.6.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

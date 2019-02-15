@@ -46,7 +46,7 @@ public class TicketStatutResource extends AbstractResource {
     @Path("search")
     public List<TicketStatut> search(@QueryParam("projetId") Integer pProjetId) {
         StatutManager vStatutManager = getManagerFactory().getStatutManager();
-        List<TicketStatut> vListStatut = getManagerFactory().getStatutManager().getListTicketStatut();
+        List<TicketStatut> vListStatut = vStatutManager.getListTicketStatut();
         return vListStatut;
     }
 

@@ -8,5 +8,5 @@ import java.util.List;
 public interface NiveauBugManager {
     BugNiveau getBugNiveau(Integer pId) throws NotFoundException;
     List<BugNiveau> getListBugNiveau();
-    int getCountNiveauBug();
+    int getCountBugNiveau();
 }

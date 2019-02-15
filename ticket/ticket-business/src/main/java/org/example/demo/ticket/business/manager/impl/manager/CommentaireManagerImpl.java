@@ -11,11 +11,18 @@ import java.util.List;
 public class CommentaireManagerImpl extends AbstractManagerImpl implements CommentaireManager {
     @Override
     public Commentaire getCommentaire(Integer pId) throws NotFoundException {
-        return null;
+        return getDaoFactory().getCommentaireDao().getCommentaire(pId);
     }
 
     @Override
     public List<Commentaire> getListCommentaire() {
-        return null;
+        return getDaoFactory().getCommentaireDao().getListCommentaire();
     }
+
+    @Override
+    public int getCountCommentaire() {
+        return getDaoFactory().getCommentaireDao().getCountCommentaire();
+    }
+
+
 }

@@ -14,7 +14,7 @@ import java.util.List;
 @Named
 public class BugDaoImpl extends AbstractDaoImpl implements BugDao {
     @Override
-    public Bug getBug(Integer pId) throws NotFoundException {
+    public Bug getBug(Integer pId) {
         String vSQL = "SELECT * FROM bug WHERE ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 

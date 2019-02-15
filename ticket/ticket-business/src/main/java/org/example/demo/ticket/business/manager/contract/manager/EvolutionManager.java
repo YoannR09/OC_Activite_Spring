@@ -8,4 +8,5 @@ import java.util.List;
 public interface EvolutionManager {
     Evolution getEvolution(Integer pId) throws NotFoundException;
     List<Evolution> getListEvolution();
+    int getCountEvolution();
 }

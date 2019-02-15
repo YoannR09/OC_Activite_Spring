@@ -50,7 +50,7 @@ public class TicketResource extends AbstractResource {
     @Path("search")
     public List<Ticket> search(@QueryParam("projetId") Integer pProjetId) {
         TicketManager vTicketManager = getManagerFactory().getTicketManager();
-        List<Ticket> vList = getManagerFactory().getTicketManager().getListTicket();
+        List<Ticket> vList = vTicketManager.getListTicket();
         return vList;
     }
 

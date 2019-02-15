@@ -1,11 +1,11 @@
 package org.example.demo.ticket.consumer.impl.dao;
 
 import org.example.demo.ticket.consumer.contract.dao.StatutDao;
-import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.bean.ticket.TicketStatut;
 import org.example.demo.ticket.model.exception.NotFoundException;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 
 import javax.inject.Named;
 import java.util.List;
