@@ -53,4 +53,11 @@ public class TicketResource extends AbstractResource {
         List<Ticket> vList = getManagerFactory().getTicketManager().getListTicket();
         return vList;
     }
+
+    @GET
+    @Path("count")
+    public int getCount(int nombre) {
+        nombre = getManagerFactory().getTicketManager().getCountTicket();
+        return nombre;
+    }
 }

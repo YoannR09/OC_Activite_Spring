@@ -8,10 +8,7 @@ import java.util.List;
 public interface BugManager {
     Bug getBug(Integer pId) throws NotFoundException;
 
-    /**
-     * Renvoie la liste des {@link Bug}
-     *
-     * @return List
-     */
     List<Bug> getListBug();
+
+    int getCountBug();
 }

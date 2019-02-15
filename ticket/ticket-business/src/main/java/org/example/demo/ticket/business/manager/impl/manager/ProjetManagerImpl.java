@@ -17,8 +17,8 @@ public class ProjetManagerImpl extends AbstractManagerImpl implements ProjetMana
 
     @Override
     public List<Projet> getListProjet() {
-        List<Projet> vList = getDaoFactory().getProjetDao().getListProjet();
-        return vList;
+
+        return getDaoFactory().getProjetDao().getListProjet();
     }
 
     @Override

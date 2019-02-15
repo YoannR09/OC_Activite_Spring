@@ -8,4 +8,5 @@ import java.util.List;
 public interface StatutManager {
     TicketStatut getTicketStatut(Integer pId) throws NotFoundException;
     List<TicketStatut> getListTicketStatut();
+    int getCountStatut();
 }

@@ -12,11 +12,16 @@ import java.util.List;
 public class BugManagerImpl extends AbstractManagerImpl implements BugManager {
     @Override
     public Bug getBug(Integer pId) throws NotFoundException {
-        return null;
+        return getDaoFactory().getBugDao().getBug(pId);
     }
 
     @Override
     public List<Bug> getListBug() {
-        return null;
+        return getDaoFactory().getBugDao().getListBug();
+    }
+
+    public int getCountBug(){
+
+        return getDaoFactory().getBugDao().getCountBug();
     }
 }

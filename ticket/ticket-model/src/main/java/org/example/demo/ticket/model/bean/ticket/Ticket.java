@@ -10,7 +10,7 @@ import org.example.demo.ticket.model.bean.projet.Projet;
  *
  * @author lgu
  */
-public abstract class Ticket {
+public class Ticket {
 
     // ==================== Attributs ====================
     private Long numero;
@@ -25,7 +25,7 @@ public abstract class Ticket {
     /**
      * Constructeur par défaut.
      */
-    protected Ticket() {
+    public Ticket() {
     }
 
 

@@ -11,11 +11,15 @@ import java.util.List;
 public class NiveauBugManagerImpl extends AbstractManagerImpl implements NiveauBugManager {
     @Override
     public BugNiveau getBugNiveau(Integer pId) throws NotFoundException {
-        return null;
+        return getDaoFactory().getNiveauBugDao().getBugNiveau(pId);
     }
 
     @Override
     public List<BugNiveau> getListBugNiveau() {
-        return null;
+        return getDaoFactory().getNiveauBugDao().getListBugNiveau();
+    }
+
+    public int getCountBugNiveau(){
+     return getDaoFactory().getNiveauBugDao().getCountBugNiveau();
     }
 }
