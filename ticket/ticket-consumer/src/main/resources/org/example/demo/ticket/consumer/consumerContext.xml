@@ -18,7 +18,11 @@
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="org.example.demo.ticket.consumer.impl.dao.AbstractDaoImpl" />
         <property name="targetMethod" value="setDataSource" />
-        <property name="arguments" ref="dataSource" />
+        <property name="arguments" ref="dataSourceTicket" />
+    </bean>
+
+    <bean id="dataSourceTicket" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_TICKET"/>
     </bean>
 
 </beans>

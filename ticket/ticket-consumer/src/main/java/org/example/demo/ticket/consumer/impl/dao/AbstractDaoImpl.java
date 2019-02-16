@@ -8,14 +8,12 @@ import javax.sql.DataSource;
 public abstract class AbstractDaoImpl {
 
     @Inject
-    @Named("dataSource")
+    @Named("dataSourceTicket")
    private DataSource dataSource;
 
     protected DataSource getDataSource(){
         return dataSource;
     }
 
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
+    public void setDataSource(DataSource dataSource) { this.dataSource = dataSource; }
 }
