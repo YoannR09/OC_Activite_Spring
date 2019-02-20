@@ -6,13 +6,12 @@ import org.example.demo.ticket.consumer.contract.DAOFactory;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named
-public abstract class AbstractManagerImpl implements AbstractResource {
+// @Named
+public abstract class AbstractManagerImpl { //implements AbstractResource {
 
-    @Inject
+   // @Inject
     private static DAOFactory daoFactory;
 
-    @Override
     public DAOFactory getDaoFactory() {
         return daoFactory;
     }

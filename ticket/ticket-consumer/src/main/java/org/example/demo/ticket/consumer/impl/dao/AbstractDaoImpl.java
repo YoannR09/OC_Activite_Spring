@@ -9,7 +9,7 @@ public abstract class AbstractDaoImpl {
 
     @Inject
     @Named("dataSourceTicket")
-   private DataSource dataSource;
+    private DataSource dataSource;
 
     protected DataSource getDataSource(){
         return dataSource;
