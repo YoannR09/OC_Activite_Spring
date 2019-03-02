@@ -58,8 +58,8 @@ html, body {
       class="card">
       <div class="card-header" id="top">Projet</div>
       <div class="card-body" id="cadre">
-        <p>Projet : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-        <p>Version : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
+        <p>Projet : <a href="http://localhost:8080/projets/list">Liste</a> - <a href="http://localhost:8080/projets/count">Nombre</a></p>
+        <p>Version : <a href="http://localhost:8080/version/list">Liste</a> - <a href="http://localhost:8080/version/count">Nombre</a></p>
       </div>
     
     </div>
@@ -68,13 +68,13 @@ html, body {
       class="card">
       <div class="card-header" class="top">Ticket</div>
       <div class="card-body" class="cadre">
-         <p>Ticket : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-        <p>Statut : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-         <p>Commentaire : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-        <p>Bug : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-         <p>BugNiveau : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-        <p>Evolution : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
-         <p>HistoriqueStatus : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
+         <p>Ticket : <a href="http://localhost:8080/tickets/list">Liste</a> - <a href="http://localhost:8080/tickets/search">Nombre</a></p>
+        <p>Statut : <a href="http://localhost:8080/ticketStatut/list">Liste</a> - <a href="http://localhost:8080/ticketStatut/search">Nombre</a></p>
+         <p>Commentaire : <a href="http://localhost:8080/commentaire/list">Liste</a> - <a href="http://localhost:8080/commentaire/search">Nombre</a></p>
+        <p>Bug : <a href="http://localhost:8080/bug/list">Liste</a> - <a href="http://localhost:8080/bug/search">Nombre</a></p>
+         <p>BugNiveau : <a href="http://localhost:8080/niveauBug/list">Liste</a> - <a href="http://localhost:8080/niveauBug/search">Nombre</a></p>
+        <p>Evolution : <a href="http://localhost:8080/evolution/list">Liste</a> - <a href="http://localhost:8080/evolution/search">Nombre</a></p>
+         <p>HistoriqueStatus : <a href="http://localhost:8080/historiqueStatut/list">Liste</a> - <a href="http://localhost:8080/historiqueStatut/search">Nombre</a></p>
       </div>
     
     </div>
@@ -82,7 +82,7 @@ html, body {
   <div class="card text-white bg-dark mb-3" style="max-width: 100%;" id="card" >
       <div class="card-header" class="top">Utilisateur</div>
       <div class="card-body" class="cadre">
-    <p>Utilisateur : <a href="#">Liste</a> - <a href="#">Nombre</a></p>
+    <p>Utilisateur : <a href="http://localhost:8080/utilisateur/list">Liste</a> - <a href="http://localhost:8080/utilisateur/search">Nombre</a></p>
       </div>
     </div>
 </div>

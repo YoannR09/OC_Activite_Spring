@@ -45,7 +45,7 @@ public class VersionResource extends AbstractResource {
      * @return List
      */
     @GET
-    @Path("{list}")
+    @Path("list")
     public List<Version> get() {
         VersionManager vVersionManager = getManagerFactory().getVersionManager();
         List<Version> vListVersion = vVersionManager.getListVersion();
