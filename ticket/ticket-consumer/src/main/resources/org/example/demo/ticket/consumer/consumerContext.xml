@@ -14,12 +14,12 @@
     <context:component-scan base-package="org.example.demo.ticket"/>
 
     <!-- ==== AbstractResource ===== -->
-
+    <!--
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="org.example.demo.ticket.consumer.impl.dao.AbstractDaoImpl" />
         <property name="targetMethod" value="setDataSource" />
         <property name="arguments" ref="dataSourceTicket" />
     </bean>
-    
+    -->
 
 </beans>
