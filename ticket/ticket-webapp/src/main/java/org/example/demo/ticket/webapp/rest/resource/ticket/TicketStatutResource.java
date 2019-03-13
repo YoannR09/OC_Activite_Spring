@@ -39,12 +39,11 @@ public class TicketStatutResource extends AbstractResource {
     /**
      * Recherche et renvoie les {@link Ticket} correspondant aux critères.
      *
-     * @param pProjetId identifiant du {@link org.example.demo.ticket.model.bean.projet.Projet}
      * @return List
      */
     @GET
-    @Path("search")
-    public List<TicketStatut> search(@QueryParam("projetId") Integer pProjetId) {
+    @Path("list")
+    public List<TicketStatut> getListTicketStatut() {
         StatutManager vStatutManager = getManagerFactory().getStatutManager();
         List<TicketStatut> vListStatut = vStatutManager.getListTicketStatut();
         return vListStatut;

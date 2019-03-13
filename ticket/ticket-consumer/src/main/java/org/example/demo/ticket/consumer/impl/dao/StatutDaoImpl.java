@@ -1,25 +1,29 @@
 package org.example.demo.ticket.consumer.impl.dao;
 
 import org.example.demo.ticket.consumer.contract.dao.StatutDao;
+import org.example.demo.ticket.consumer.rowmapper.StatutRM;
 import org.example.demo.ticket.model.bean.ticket.TicketStatut;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
 @Named
 public class StatutDaoImpl extends AbstractDaoImpl implements StatutDao {
+
+    @Inject
+    StatutRM rowMapper;
+
     @Override
     public TicketStatut getStatut(Integer pId) throws NotFoundException {
         String vSQL = "SELECT * FROM statut WHERE ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
-        RowMapper<TicketStatut> rowMapper = mapper();
-
-        TicketStatut statut = (TicketStatut) vJdbcTemplate.query(vSQL, rowMapper);
+        TicketStatut statut = vJdbcTemplate.queryForObject(vSQL, rowMapper);
 
         return statut;
     }
@@ -28,8 +32,6 @@ public class StatutDaoImpl extends AbstractDaoImpl implements StatutDao {
     public List<TicketStatut> getListStatut() {
         String vSQL = "SELECT * FROM statut";
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
-
-        RowMapper<TicketStatut> rowMapper = mapper();
 
         List<TicketStatut> vListStatut = vJdbcTemplate.query(vSQL, rowMapper);
 
@@ -43,15 +45,5 @@ public class StatutDaoImpl extends AbstractDaoImpl implements StatutDao {
                 "SELECT COUNT(*) FROM statut",
                 Integer.class);
         return vNbrStatut;
-    }
-
-    public RowMapper<TicketStatut> mapper(){
-        RowMapper<TicketStatut> rowMapper = (rs, i) -> {
-            TicketStatut statut = new TicketStatut();
-            statut.setId(rs.getInt("id"));
-            statut.setLibelle(rs.getString("libelle"));
-            return statut;
-        };
-        return rowMapper;
     }
 }

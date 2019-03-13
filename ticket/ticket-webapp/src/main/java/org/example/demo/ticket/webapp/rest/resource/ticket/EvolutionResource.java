@@ -37,14 +37,11 @@ public class EvolutionResource extends AbstractResource {
     }
 
     /**
-     * Recherche et renvoie les {@link Evolution} correspondant aux critères.
-     *
-     * @param pProjetId identifiant du {@link org.example.demo.ticket.model.bean.projet.Projet}
      * @return List
      */
     @GET
     @Path("list")
-    public List<Evolution> search(@QueryParam("projetId") Integer pProjetId) {
+    public List<Evolution> getListEvolution() {
         EvolutionManager vEvolutionManager = getManagerFactory().getEvolutionManager();
         List<Evolution> vList = vEvolutionManager.getListEvolution();
         return vList;

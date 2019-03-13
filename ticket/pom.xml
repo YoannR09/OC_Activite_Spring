@@ -47,6 +47,7 @@
         <jersey.version>2.26</jersey.version>
         <spring.version>5.0.6.RELEASE</spring.version>
         <struts.version>2.5.14.1</struts.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
     </properties>
 
 
@@ -119,6 +120,18 @@
                 <version>1.1.2</version>
                 <scope>runtime</scope>
             </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.apache.commons</groupId>

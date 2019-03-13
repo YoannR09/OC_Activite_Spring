@@ -31,13 +31,4 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
                 Integer.class);
         return vNbrCommentaire;
     }
-
-    public RowMapper<Commentaire> mapper(){
-        RowMapper<Commentaire> rowMapper = (rs, i) -> {
-            Commentaire commentaire = new Commentaire();
-            // Le bean Commentaire est vide.
-            return commentaire;
-        };
-        return rowMapper;
-    }
 }

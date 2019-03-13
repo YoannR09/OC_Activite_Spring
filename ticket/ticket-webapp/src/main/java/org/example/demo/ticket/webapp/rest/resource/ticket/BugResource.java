@@ -24,8 +24,8 @@ public class BugResource extends AbstractResource {
         return vBug;
     }
     @GET
-    @Path("search")
-    public List<Bug> search(@QueryParam("ticketId") Integer pProjetId) {
+    @Path("list")
+    public List<Bug> getListBug() {
         BugManager vBugManager = getManagerFactory().getBugManager();
         List<Bug> vList = vBugManager.getListBug();
         return vList;

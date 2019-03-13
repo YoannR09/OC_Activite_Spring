@@ -39,12 +39,11 @@ public class UtilisateurResource  extends AbstractResource {
     /**
      * Recherche et renvoie les {@link Ticket} correspondant aux critères.
      *
-     * @param pProjetId identifiant du {@link org.example.demo.ticket.model.bean.projet.Projet}
      * @return List
      */
     @GET
-    @Path("search")
-    public List<Utilisateur> search(@QueryParam("projetId") Integer pProjetId) {
+    @Path("list")
+    public List<Utilisateur> listUtilisateur() {
         UtilisateurManager vUtilisateurManager = getManagerFactory().getUtilisateurManager();
         List<Utilisateur> vList = vUtilisateurManager.getListUtilisateur();
         return vList;

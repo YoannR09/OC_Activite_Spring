@@ -44,9 +44,8 @@ public class ProjetResource extends AbstractResource {
      */
     @GET
     @Path("list")
-    public List<Projet> get() {
-        ProjetManager vProjetManager = getManagerFactory().getProjetManager();
-        List<Projet> vListProjet = vProjetManager.getListProjet();
+    public List<Projet> getListProjet() {
+        List<Projet> vListProjet = getManagerFactory().getProjetManager().getListProjet();
         return vListProjet;
     }
 

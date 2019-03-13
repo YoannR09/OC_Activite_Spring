@@ -43,14 +43,14 @@ public class TicketResource extends AbstractResource {
     /**
      * Recherche et renvoie les {@link Ticket} correspondant aux critères.
      *
-     * @param pProjetId identifiant du {@link org.example.demo.ticket.model.bean.projet.Projet}
      * @return List
      */
     @GET
-    @Path("search")
-    public List<Ticket> search(@QueryParam("projetId") Integer pProjetId) {
+    @Path("list")
+    public List<Ticket> getListTicket() {
         TicketManager vTicketManager = getManagerFactory().getTicketManager();
         List<Ticket> vList = vTicketManager.getListTicket();
+        System.out.println("list projet : "+ vList);
         return vList;
     }
 

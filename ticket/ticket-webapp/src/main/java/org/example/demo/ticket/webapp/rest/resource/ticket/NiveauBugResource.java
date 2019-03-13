@@ -30,8 +30,8 @@ public class NiveauBugResource extends AbstractResource {
         return vBugNiveau;
     }
     @GET
-    @Path("search")
-    public List<BugNiveau> search(@QueryParam("ticketId") Integer pProjetId) {
+    @Path("list")
+    public List<BugNiveau> getListBugNiveau() {
         NiveauBugManager vNiveauBugManager = getManagerFactory().getNiveauBugManager();
         List<BugNiveau> vList = vNiveauBugManager.getListBugNiveau();
         return vList;
