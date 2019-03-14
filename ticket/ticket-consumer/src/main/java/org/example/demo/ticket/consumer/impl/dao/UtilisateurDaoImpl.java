@@ -19,7 +19,7 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 
     public Utilisateur getUtilisateur(Integer pId) {
 
-        String vSQL = "SELECT * FROM utilisateur WHERE ="+pId;
+        String vSQL = "SELECT * FROM utilisateur WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
 

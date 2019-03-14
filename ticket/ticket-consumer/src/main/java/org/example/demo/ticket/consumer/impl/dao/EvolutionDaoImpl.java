@@ -20,7 +20,7 @@ public class EvolutionDaoImpl extends AbstractDaoImpl implements EvolutionDao {
 
     @Override
     public Evolution getEvolution(Integer pId) throws NotFoundException {
-        String vSQL = "SELECT * FROM evolution WHERE ="+pId;
+        String vSQL = "SELECT * FROM evolution WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         Evolution evolution = (Evolution) vJdbcTemplate.query(vSQL, rowMapper);

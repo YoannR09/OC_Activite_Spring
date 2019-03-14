@@ -20,7 +20,7 @@ public class NiveauBugDaoImpl extends AbstractDaoImpl implements NiveauBugDao {
 
     @Override
     public BugNiveau getBugNiveau(Integer pId) throws NotFoundException {
-        String vSQL = "SELECT * FROM niveau_bug WHERE ="+pId;
+        String vSQL = "SELECT * FROM niveau_bug WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         BugNiveau bugNiveau = (BugNiveau)vJdbcTemplate.query(vSQL, rowMapper);

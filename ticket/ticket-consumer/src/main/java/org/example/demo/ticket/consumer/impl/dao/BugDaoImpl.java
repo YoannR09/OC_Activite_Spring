@@ -21,7 +21,7 @@ public class BugDaoImpl extends AbstractDaoImpl implements BugDao {
 
     @Override
     public Bug getBug(Integer pId) {
-        String vSQL = "SELECT * FROM bug WHERE ="+pId;
+        String vSQL = "SELECT * FROM bug WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         Bug bug = (Bug) vJdbcTemplate.query(vSQL, rowMapper);

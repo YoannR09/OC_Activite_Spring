@@ -20,7 +20,7 @@ public class VersionDaoImpl extends AbstractDaoImpl implements VersionDao {
 
     @Override
     public Version getVersion(Integer pId) throws NotFoundException {
-        String vSQL = "SELECT * FROM version WHERE ="+pId;
+        String vSQL = "SELECT * FROM version WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         Version version = vJdbcTemplate.queryForObject(vSQL, rowMapper);

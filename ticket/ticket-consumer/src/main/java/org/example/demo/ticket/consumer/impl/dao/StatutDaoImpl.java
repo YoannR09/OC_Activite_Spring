@@ -20,7 +20,7 @@ public class StatutDaoImpl extends AbstractDaoImpl implements StatutDao {
 
     @Override
     public TicketStatut getStatut(Integer pId) throws NotFoundException {
-        String vSQL = "SELECT * FROM statut WHERE ="+pId;
+        String vSQL = "SELECT * FROM statut WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         TicketStatut statut = vJdbcTemplate.queryForObject(vSQL, rowMapper);
