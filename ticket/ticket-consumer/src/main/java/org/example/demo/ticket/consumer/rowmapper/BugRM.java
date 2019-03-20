@@ -19,7 +19,7 @@ public class BugRM implements RowMapper<Bug> {
     public Bug mapRow(ResultSet rs, int i) throws SQLException {
         Bug bug = new Bug();
         try {
-            bug.setNiveau(niveauBugDao.getBugNiveau(rs.getInt("id")));
+            bug.setNiveau(niveauBugDao.getBugNiveau(rs.getInt("niveau_bug_id")));
         } catch (NotFoundException e) {
             e.printStackTrace();
         }

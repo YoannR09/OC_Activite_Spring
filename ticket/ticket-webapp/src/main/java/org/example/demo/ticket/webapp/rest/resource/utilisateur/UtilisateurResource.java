@@ -51,8 +51,8 @@ public class UtilisateurResource  extends AbstractResource {
 
     @GET
     @Path("count")
-    public int getCount(int nombre) {
-        nombre = getManagerFactory().getUtilisateurManager().getCountUtilisateur();
+    public int getCount() {
+        int nombre = getManagerFactory().getUtilisateurManager().getCountUtilisateur();
         return nombre;
     }
 }

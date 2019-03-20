@@ -81,7 +81,7 @@ html, body {
   <div class="card text-white bg-dark mb-3" style="max-width: 100%;" id="card" >
       <div class="card-header" class="top">Utilisateur</div>
       <div class="card-body" class="cadre">
-    <p>Utilisateur : <a href="http://localhost:8080/ticket_webapp/ticket-ws/utilisateur/list">Liste</a> - <a href="http://localhost:8080/ticket_webapp/ticket-ws/utilisateur/count">Nombre</a></p>
+    <p>Utilisateur : <a href="http://localhost:8080/ticket_webapp/ticket-ws/utilisateurs/list">Liste</a> - <a href="http://localhost:8080/ticket_webapp/ticket-ws/utilisateurs/count">Nombre</a></p>
       </div>
     </div>
 </div>

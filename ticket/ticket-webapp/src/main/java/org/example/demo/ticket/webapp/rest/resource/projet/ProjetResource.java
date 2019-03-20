@@ -51,8 +51,8 @@ public class ProjetResource extends AbstractResource {
 
     @GET
     @Path("count")
-    public int getCount(int nombre) {
-        nombre = getManagerFactory().getProjetManager().getCountProjet();
+    public int getCount() {
+        int nombre = getManagerFactory().getProjetManager().getCountProjet();
         return nombre;
     }
 }

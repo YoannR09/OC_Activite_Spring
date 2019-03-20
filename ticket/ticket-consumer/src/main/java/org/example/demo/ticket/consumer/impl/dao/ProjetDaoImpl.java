@@ -33,8 +33,6 @@ public class ProjetDaoImpl extends AbstractDaoImpl implements ProjetDao {
         String vSQL = "SELECT * FROM public.projet";
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         List<Projet> vListProjet = vJdbcTemplate.query(vSQL, projetRM);
-
-
         return vListProjet;
     }
 

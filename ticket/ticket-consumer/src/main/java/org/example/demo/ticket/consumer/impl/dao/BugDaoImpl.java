@@ -21,7 +21,7 @@ public class BugDaoImpl extends AbstractDaoImpl implements BugDao {
 
     @Override
     public Bug getBug(Integer pId) {
-        String vSQL = "SELECT * FROM bug WHERE id ="+pId;
+        String vSQL = "SELECT * FROM public.bug WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         Bug bug = (Bug) vJdbcTemplate.query(vSQL, rowMapper);
@@ -32,7 +32,7 @@ public class BugDaoImpl extends AbstractDaoImpl implements BugDao {
     @Override
     public List<Bug> getListBug() {
 
-        String vSQL = "SELECT * FROM bug";
+        String vSQL = "SELECT * FROM public.bug";
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         List<Bug> listBug = vJdbcTemplate.query(vSQL, rowMapper);
@@ -44,7 +44,7 @@ public class BugDaoImpl extends AbstractDaoImpl implements BugDao {
     public int getCountBug() {
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         int vNbrBugNiveau = vJdbcTemplate.queryForObject(
-                "SELECT COUNT(*) FROM bug",
+                "SELECT COUNT(*) FROM public.bug",
                 Integer.class);
         return vNbrBugNiveau;
     }

@@ -19,7 +19,7 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 
     public Utilisateur getUtilisateur(Integer pId) {
 
-        String vSQL = "SELECT * FROM utilisateur WHERE id ="+pId;
+        String vSQL = "SELECT * FROM public.utilisateur WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
 
@@ -30,7 +30,7 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 
 
     public List<Utilisateur> getListUtilisateur() {
-        String vSQL = "SELECT * FROM utilisateur";
+        String vSQL = "SELECT * FROM public.utilisateur";
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         return vJdbcTemplate.query(vSQL, utilisateurRM);
@@ -39,10 +39,9 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
     public int getCountUtilisateur() {
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         int vNbrUtilisateur = vJdbcTemplate.queryForObject(
-                "SELECT COUNT(*) FROM utilisateur",
+                "SELECT COUNT(*) FROM public.utilisateur",
                 Integer.class);
         return vNbrUtilisateur;
     }
-
 
 }

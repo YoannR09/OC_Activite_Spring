@@ -26,11 +26,7 @@ public class TicketRM implements RowMapper<Ticket> {
         ticket.setDate(rs.getDate("date"));
         ticket.setDescription(rs.getString("description"));
         try {
-            ticket.setStatut(statutDao.getStatut(rs.getInt("statut_id")));
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
+            ticket.setStatut(statutDao.getStatut(rs.getInt("statut_actuel_id")));
             ticket.setProjet(projetDao.getProjet(rs.getInt("projet_id")));
         } catch (NotFoundException e) {
             e.printStackTrace();

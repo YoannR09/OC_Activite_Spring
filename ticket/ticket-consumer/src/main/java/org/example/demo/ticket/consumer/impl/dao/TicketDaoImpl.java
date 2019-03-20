@@ -21,7 +21,7 @@ public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
 
     public Ticket getTicket(long pId) throws NotFoundException {
 
-        String vSQL = "SELECT * FROM ticket WHERE id ="+pId;
+        String vSQL = "SELECT * FROM public.ticket WHERE id ="+pId;
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         Ticket ticket = vJdbcTemplate.queryForObject(vSQL, rowMapper);
@@ -33,7 +33,7 @@ public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
 
     public List<Ticket> getListTicket() {
 
-        String vSQL = "SELECT * FROM ticket";
+        String vSQL = "SELECT * FROM public.ticket";
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
         List<Ticket> vListTicket = vJdbcTemplate.query(vSQL, rowMapper);
@@ -45,7 +45,7 @@ public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
     public int getCountTicket() {
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         int vNbrTicket = vJdbcTemplate.queryForObject(
-                "SELECT COUNT(*) FROM ticket",
+                "SELECT COUNT(*) FROM public.ticket",
                 Integer.class);
         return vNbrTicket;
     }
